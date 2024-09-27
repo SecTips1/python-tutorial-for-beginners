@@ -24,8 +24,6 @@ logging.warning("This is a warning message")
 logging.error("This is an error message")
 logging.critical("This is a critical message")
 Output:
-vbnet
-Copy code
 DEBUG:root:This is a debug message
 INFO:root:This is an info message
 WARNING:root:This is a warning message
@@ -45,14 +43,10 @@ Customizing Logging Output
 You can customize the format of the log messages using the format argument in basicConfig().
 
 Example:
-python
-Copy code
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 logging.info("Application started")
 Output:
-mathematica
-Copy code
 2024-09-30 12:00:00,123 - INFO - Application started
 This format includes the timestamp, the severity level, and the actual log message.
 
@@ -60,8 +54,6 @@ Logging to a File
 You can direct the log output to a file by setting the filename parameter in basicConfig().
 
 Example:
-python
-Copy code
 logging.basicConfig(filename='app.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 
 logging.error("This error will be logged to a file")
@@ -71,8 +63,6 @@ Creating Loggers
 The logging module allows you to create loggers for different parts of your application. A logger object is created using the getLogger() function, which allows you to organize your logging by components.
 
 Example:
-python
-Copy code
 logger = logging.getLogger('my_logger')
 logger.setLevel(logging.DEBUG)
 
@@ -83,8 +73,6 @@ Handlers in Logging
 Handlers allow you to route log messages to different destinations, such as console, files, or remote servers. You can attach multiple handlers to a single logger to send the log messages to various outputs.
 
 Example: Logging to Console and File
-python
-Copy code
 # Create logger
 logger = logging.getLogger('example_logger')
 logger.setLevel(logging.DEBUG)
@@ -117,8 +105,6 @@ Logging Exceptions
 You can log exceptions with the exception() method, which automatically captures and logs the exception traceback.
 
 Example:
-python
-Copy code
 try:
     1 / 0
 except ZeroDivisionError:
@@ -136,8 +122,6 @@ Rotating Log Files
 For applications that run for long periods of time, it’s common to rotate log files to avoid creating a massive log file. The logging.handlers module provides a RotatingFileHandler for this purpose.
 
 Example: Using RotatingFileHandler
-python
-Copy code
 from logging.handlers import RotatingFileHandler
 
 # Set up a rotating file handler
@@ -157,8 +141,6 @@ Organize loggers by modules: Use different loggers for different modules or comp
 Conclusion
 Logging is an essential tool for debugging and monitoring applications. Python’s logging module offers a flexible and easy-to-use way to handle logging, whether it’s to the console, files, or other handlers. By using loggers, handlers, and formatters, you can set up effective logging systems for both small scripts and large-scale applications.
 
-vbnet
-Copy code
 
 This Markdown file explains how to use Python’s `logging` module, covering topics such as basic logging, creating loggers, handlers, logging exceptions, and using rotating log files. The structure ensures that it’s easy to read and visually appealing when previewed on GitHub.
 
