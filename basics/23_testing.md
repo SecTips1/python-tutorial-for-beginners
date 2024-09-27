@@ -55,8 +55,6 @@ To install pytest, run the following command:
 
 pip install pytest
 Example: Simple pytest Test
-python
-Copy code
 # Function to be tested
 def multiply(x, y):
     return x * y
@@ -141,8 +139,7 @@ bash
 Copy code
 coverage run -m pytest
 Viewing Coverage Report
-bash
-Copy code
+
 coverage report
 You can also generate an HTML report:
 
